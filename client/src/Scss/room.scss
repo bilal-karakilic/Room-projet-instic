@@ -1,0 +1,93 @@
+.Room {
+    .container-room {
+            padding: 50px 307px;
+        h1 {
+
+        }
+        .Img {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            img {
+                width: auto;
+            }
+        }
+        .container-content {
+            div:first-child {
+                background-color: rgba(94, 99, 220, 0.2);;
+                width: 100%;
+                border-radius: 10px;
+                 ul {
+                     display: flex;
+                     list-style: none;
+                     padding: 0%;
+                     margin: 0;
+                     justify-content: center;
+                     gap: 20px;
+                    li {
+                        font-family: 'Montserrat', sans-serif;
+                        font-size: 14px;
+                        color: $gris;
+                        line-height: 17px;
+                        font-weight: 500;
+                        text-transform: capitalize;
+                    }
+                 }
+            }
+            div:nth-child(2) {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 14px;
+                color: $gris;
+                line-height: 17px;
+                font-weight: 500;
+                text-transform: capitalize;
+                margin-top: 20px;
+                span {
+                    font-family: 'Montserrat', sans-serif;
+                        font-size: 38px;
+                        color: black;
+                        line-height: 17px;
+                        font-weight: 800;
+                        text-transform: capitalize;
+                }
+            }
+
+            div:nth-child(3) {
+                span {
+                    font-family: 'Montserrat', sans-serif;
+                        font-size: 20px;
+                        color: black;
+                        line-height: 17px;
+                        font-weight: 800;
+                        text-transform: capitalize;
+                        display: block;
+                        margin-bottom: 20px;
+                }
+                font-family: 'Montserrat', sans-serif;
+                font-size: 14px;
+                color: $gris;
+                line-height: 17px;
+                font-weight: 500;
+                margin-top: 20px;
+            }
+            a {
+                display: flex;
+                width: 100%;
+                box-sizing: border-box;
+                background-color: $violet;
+                margin-top:30px;
+                text-decoration: none;
+                color: $white;
+                justify-content: center;
+                padding: 16px 165px;
+                border-radius: 10px;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 18px;
+                line-height: 17px;
+                font-weight: 800;
+                text-transform: capitalize;
+            }
+        }
+    }
+}

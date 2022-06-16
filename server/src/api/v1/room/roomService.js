@@ -1,16 +1,16 @@
 const db = require("../models");
 
-exports.getAllRooms = async () => {
-    const rooms = await db.sequelize.query('SELECT * FROM rooms');
+exports.getRooms = async () => {
+    const rooms = await db.room.findAll();
     return rooms;
 }
 
 
 exports.getRoom = async (id) => {
-    const room = await db.sequelize.query(`SELECT * FROM rooms WHERE id = ${id}`);
-    if(room) {
-        return room;
-    } else {
-        return;
+    console.log(id);
+    const room = await db.room.findOne({where: {id: id }});
+    if(!room) {
+        return false;
     }
+    return room;
 }

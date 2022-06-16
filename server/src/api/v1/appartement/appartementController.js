@@ -1,4 +1,4 @@
-const { getAllAppartements, getAppartement } = require("./appartementService");
+const { getAllAppartements, getAppartement, addAppartement } = require("./appartementService");
 
 exports.readAllAppartements = async (req,res) => {
     //call getall du service
@@ -22,5 +22,14 @@ exports.readAppartement = async (req,res) => {
         res.status(400)
             .json(error);
     }
+}
+
+
+exports.addAppartement = async (req,res) => {
+    const {name, thumbnail, street, zipcode, city, number, nameRoom, imgRoom, surface,price } = req.body;
+    const data = {name, thumbnail, street, zipcode, city, number, nameRoom, imgRoom, surface,price };
+
+    const appartement = await addAppartement(data);
+    res.json(req.body)
 }
 

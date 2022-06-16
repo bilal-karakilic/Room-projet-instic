@@ -1,16 +1,9 @@
 // model de la table
 
 
-module.exports = (sequelize, Sequelize) => {
+module.exports = User = (sequelize, Sequelize) => {
     const user = sequelize.define("user", {
-    
-        title: {
-        
-            type: Sequelize.STRING,
-            allowNull: false
-        
-        },
-    
+
         name: {
             type: Sequelize.STRING,
             allowNull: false
@@ -27,26 +20,23 @@ module.exports = (sequelize, Sequelize) => {
             allowNull: false
         },
 
-        roles: {
-        
-            type: Sequelize.STRING,
-            defaultValue: 'user'
+        isAdmin: {
+            type: Sequelize.BOOLEAN,
+            defaultValue: false
         },
-    
+
         reservation: {
-        
             type: Sequelize.INTEGER,
-            defaultValue: null
+            defaultValue: 0
         },
 
         token: {
-        
             type: Sequelize.TEXT,
-            allowNull: false
+            defaultValue: 'null'
         }
-    
+
     });
-    
+
     return user;
-    
+
 };

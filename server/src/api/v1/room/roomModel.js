@@ -3,14 +3,13 @@
 module.exports = (sequelize, Sequelize) => {
 
     const room = sequelize.define("room", {
-    
-        title: {
-        
+
+        name: {
+
             type: Sequelize.STRING,
             allowNull: false
-        
         },
-    
+
         number: {
             type: Sequelize.INTEGER,
             allowNull: false
@@ -32,13 +31,18 @@ module.exports = (sequelize, Sequelize) => {
         },
 
         appart_id: {
-        
+
             type: Sequelize.INTEGER,
             allowNull: false
         },
-    
+        reserved: {
+
+            type: Sequelize.INTEGER,
+            defaultValue: false,
+        },
+
     });
-    
+
     return room;
-    
+
 };

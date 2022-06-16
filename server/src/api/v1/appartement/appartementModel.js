@@ -1,17 +1,12 @@
 // model de la table
 
+const { room } = require("../models");
+
 
 module.exports = (sequelize, Sequelize) => {
 
     const appartement = sequelize.define("appartement", {
-        
-        title: {
-        
-            type: Sequelize.STRING,
-            allowNull: false
-        
-        },
-    
+
         name: {
             type: Sequelize.STRING,
             allowNull: false
@@ -34,19 +29,13 @@ module.exports = (sequelize, Sequelize) => {
         },
 
         city: {
-        
+
             type: Sequelize.STRING,
             allowNull: false
         },
-    
-        rooms: {
-        
-            type: Sequelize.JSON,
-            defaultValue: null
-        }
-    
+
     });
-    
+
     return appartement;
-    
+
 };

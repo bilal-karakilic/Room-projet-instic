@@ -1,0 +1,79 @@
+.AdminConnexion {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container-form {
+        padding: 32px 52px;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        .form-content {
+            svg {
+                margin-bottom: 32px;
+                color: $gris;
+            }
+            h2 {
+                color: $gris;
+                margin-top: 0;
+                margin-bottom: 5px;
+                font-size: 25px
+            }
+            p {
+                margin-top: 0;
+                margin-bottom: 24px;
+                font-size: 16px;
+            }
+        }
+        form {
+            div {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 18px;
+                label {
+                    margin-bottom: 8px;
+                }
+                input {
+                    border-radius: 8px;
+                    padding: 10px 12px;
+                    border: 1px solid #83899A;
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+            button {
+                background-color: $gris;
+                color: $white;
+                width: 100%;
+                border-radius: 8px;
+                border: none;
+                padding: 9px 130px;
+                cursor: pointer;
+            }
+            .addRoom {
+                cursor: pointer;
+                color: red;
+            }
+        }
+        .form-content-bottom {
+            p:first-child{
+                a {
+                    text-decoration: none;
+                    color: $gris;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+            p:last-child {
+
+            }
+        }
+    }
+}
+
+.AppartAdd {
+    .AdminConnexion {
+        margin-top: 20px;
+    }
+}

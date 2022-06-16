@@ -1,4 +1,5 @@
 const express = require('express');
+const { tokenVerif } = require('../middleware/TokenVerif');
 const appartementController = require('./appartementController');
 
 // init routeur express
@@ -9,8 +10,12 @@ router.route('/appartements')
 
     .get([
         appartementController.readAllAppartements
-    ]);
+    ])
 
+    .post([
+        tokenVerif,
+        appartementController.addAppartement
+    ])
 router.route('/appartements/:id')
 
     .get([
